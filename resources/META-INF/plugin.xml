@@ -1,0 +1,32 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Service继承类生成器</name>
+  <version>1.0</version>
+  <vendor email="brioal@foxmail.com" url="https://github.com/Brioal">Brioal</vendor>
+
+  <description>根据现有的Service接口自动创建Impl文件夹生成继承类，暂时不会自动重写方法</description>
+
+  <change-notes>根据现有的Service接口自动创建Impl文件夹生成继承类，暂时不会自动重写方法</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.brioal" class="com.brioa.serviceimplgenerator.ServiceImplGenerator" text="ServiceImplGenerator"
+            description="ServiceImplGenerator">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
